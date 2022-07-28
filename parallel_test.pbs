@@ -1,0 +1,11 @@
+#PBS -l select=1:ncpus=4:model=bro
+#PBS -l site=static_broadwell
+#PBS -l walltime=02:00:00
+#PBS -q devel
+#PBS -N parallel_test 
+#PBS -W group_list=n1853
+
+#set directory
+cd /nobackup/jakravit/git/EAP_parallel
+seq 4 | parallel -j 4 -u --sshloginfile $PBS_NODEFILE \
+ "cd $PWD;./test_parallel_02.sh {}"
