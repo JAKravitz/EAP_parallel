@@ -3,7 +3,7 @@
 #PBS -l walltime=02:00:00
 #PBS -q normal
 #PBS -N parallel_test 
-#PBS -W group_list=n1853
+
 
 #set directory
 cd /nobackup/jakravit/git/EAP_parallel
