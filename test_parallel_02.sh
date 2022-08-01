@@ -2,7 +2,7 @@
 #make directory
 mkdir -p run_$1
 cp run_batch.py run_$1/run_batch.py
-cp EAP_tn.py run_$1/EAP_tn.py
+cp EAP.py run_$1/EAP.py
 cp Dmmex_R14B_4.f run_$1/Dmmex_R14B_4.f
 cp Dmmex_R14B_4.cpython-39-x86_64-linux-gnu.so run_$1/Dmmex_R14B_4.cpython-39-x86_64-linux-gnu.so
 #cp {run_EAP_batch.py, EAP_tn.py, Dmmex_R14B_4.f, Dmmex_R14B_4.cpython-39-x86_64-linux-gnu.so} run_$1/
