@@ -16,4 +16,4 @@ source activate tf2_9
 
 #run code
 echo "Executing run $1 on" `hostname` "in $PWD"
-/swbuild/analytix/tools/miniconda3_220407/envs/tf2_9/bin/python test_single_07c.py $1
+/swbuild/analytix/tools/miniconda3_220407/envs/tf2_9/bin/python run_EAP_batch.py $1
