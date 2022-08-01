@@ -1,8 +1,0 @@
-cp: cannot stat 'test_single_07c.py': No such file or directory
-cp: cannot stat 'test_single_07c.py': No such file or directory
-cp: cannot stat 'test_single_07c.py': No such file or directory
-cp: cannot stat 'test_single_07c.py': No such file or directory
-/swbuild/analytix/tools/miniconda3_220407/envs/tf2_9/bin/python: can't open file '/nobackupp18/jakravit/git/EAP_parallel/run_4/run_EAP_batch.py': [Errno 2] No such file or directory
-/swbuild/analytix/tools/miniconda3_220407/envs/tf2_9/bin/python: can't open file '/nobackupp18/jakravit/git/EAP_parallel/run_1/run_EAP_batch.py': [Errno 2] No such file or directory
-/swbuild/analytix/tools/miniconda3_220407/envs/tf2_9/bin/python: can't open file '/nobackupp18/jakravit/git/EAP_parallel/run_2/run_EAP_batch.py': [Errno 2] No such file or directory
-/swbuild/analytix/tools/miniconda3_220407/envs/tf2_9/bin/python: can't open file '/nobackupp18/jakravit/git/EAP_parallel/run_3/run_EAP_batch.py': [Errno 2] No such file or directory
