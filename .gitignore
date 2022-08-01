@@ -3,6 +3,9 @@ parallel_test.e*
 parallel_test.o*
 run_*/
 
+# mac related
+.DS_store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
