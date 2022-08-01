@@ -1,7 +1,6 @@
 # EAP related
 parallel_test.e*
 parallel_test.o*
-run_*/
 
 # mac related
 .DS_Store
