@@ -2,7 +2,7 @@
 # coding: utf-8
 import numpy as np
 import pandas as pd
-from EAP_tn import EAP
+from EAP import EAP
 import pickle
 import random
 import itertools
@@ -25,7 +25,7 @@ if __name__ == "__main__":
     
     phytodata = pd.read_csv('/nobackup/jakravit/git/EAP_parallel/phyto_data.csv')
     # phytodata = pd.read_csv('/Users/jakravit/pyProjects/EAP_parallel/phyto_data.csv')
-    phytodata = phytodata.iloc[0:8,:]
+    # phytodata = phytodata.iloc[0:8,:]
     # with open('/nobackup/tjnorman/geortm/EAP_02/phyto_dict.pkl', 'rb') as picklefile:
     #     phyto_dict = pickle.load(picklefile)
     
@@ -45,7 +45,7 @@ if __name__ == "__main__":
 
     for key in phyto_dict.keys():
         print('On node {} are processed: {}'.format(key, phyto_dict[key]))
-    key = int(sys.argv[1])
+    # key = int(sys.argv[1])
     #print('the key is: {}'.format(key))
 
     parameters = ['Qc',
@@ -66,7 +66,7 @@ if __name__ == "__main__":
     #(changing this changes your interp value when normalising kshell)
     l = np.arange(.4, .9025, .0025).astype(np.float32) 
 
-    outpath = '/nobackup/jakravit/data/EAP_batch_outputs/optics_test_s01.p'
+    # outpath = '/nobackup/jakravit/data/EAP_batch_outputs/optics_test_s01.p'
     phytodata.info()
 
     count = 0
