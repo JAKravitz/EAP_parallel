@@ -42,7 +42,7 @@ def EAP (l, im, Deff, ncore, nshell, Vs, Veff, ci, psd):
     
     # shell imag RI
     kshell_base = im
-    kshell_base = griddata(im_wv, im.values, l, 'linear',)
+    # kshell_base = griddata(im_wv, im.values, l, 'linear',)
     kshell_norm = (6.75e-7/ nmedia) * (0.027 * ci/ Vs) / (4 * np.pi) #scale to this theoretical max unpackaged chl abs at 675 nm
     kshell = kshell_base * (kshell_norm / kshell_base[int_val])
     
