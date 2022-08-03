@@ -64,7 +64,7 @@ if __name__ == "__main__":
 
     # wavelength range and resolution 
     #(changing this changes your interp value when normalising kshell)
-    l = np.arange(.4, .9025, .0025).astype(np.float32) 
+    l = np.arange(.4, .901, .001).astype(np.float32) 
 
     # outpath = '/nobackup/jakravit/data/EAP_batch_outputs/optics_test_s01.p'
     phytodata.info()
