@@ -25,7 +25,7 @@ if __name__ == "__main__":
     
     phytodata = pd.read_csv('/nobackup/jakravit/git/EAP_parallel/phyto_data.csv')
     # phytodata = pd.read_csv('/Users/jakravit/pyProjects/EAP_parallel/phyto_data.csv')
-    phytodata = phytodata.iloc[0:27,:]
+    phytodata = phytodata.iloc[0:28,:]
     # with open('/nobackup/tjnorman/geortm/EAP_02/phyto_dict.pkl', 'rb') as picklefile:
     #     phyto_dict = pickle.load(picklefile)
     
@@ -35,7 +35,7 @@ if __name__ == "__main__":
     count = 0
     name = 0
     for p in phytos:
-        if count%2 == 0:
+        if count%1 == 0:
             name = name+1
             phyto_dict[name] = []
             phyto_dict[name].append(p)
@@ -43,8 +43,8 @@ if __name__ == "__main__":
             phyto_dict[name].append(p)
         count+=1
 
-    for key in phyto_dict.keys():
-        print('On node {} are processed: {}'.format(key, phyto_dict[key]))
+    #for key in phyto_dict.keys():
+    #    print('On node {} are processed: {}'.format(key, phyto_dict[key]))
     # key = int(sys.argv[1])
     #print('the key is: {}'.format(key))
 
