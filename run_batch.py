@@ -25,7 +25,7 @@ if __name__ == "__main__":
     
     phytodata = pd.read_csv('/nobackup/jakravit/git/EAP_parallel/phyto_data.csv')
     # phytodata = pd.read_csv('/Users/jakravit/pyProjects/EAP_parallel/phyto_data.csv')
-    phytodata = phytodata.iloc[0:4,:]
+    phytodata = phytodata.iloc[0:27,:]
     # with open('/nobackup/tjnorman/geortm/EAP_02/phyto_dict.pkl', 'rb') as picklefile:
     #     phyto_dict = pickle.load(picklefile)
     
