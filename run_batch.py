@@ -25,7 +25,7 @@ if __name__ == "__main__":
     
     phytodata = pd.read_csv('/nobackup/jakravit/git/EAP_parallel/phyto_data.csv')
     # phytodata = pd.read_csv('/Users/jakravit/pyProjects/EAP_parallel/phyto_data.csv')
-    phytodata = phytodata.iloc[0:28,:]
+    # phytodata = phytodata.iloc[0:28,:]
     # with open('/nobackup/tjnorman/geortm/EAP_02/phyto_dict.pkl', 'rb') as picklefile:
     #     phyto_dict = pickle.load(picklefile)
     
@@ -35,7 +35,7 @@ if __name__ == "__main__":
     count = 0
     name = 0
     for p in phytos:
-        if count%1 == 0:
+        if count%3 == 0:
             name = name+1
             phyto_dict[name] = []
             phyto_dict[name].append(p)
@@ -64,7 +64,7 @@ if __name__ == "__main__":
 
     # wavelength range and resolution 
     #(changing this changes your interp value when normalising kshell)
-    l = np.arange(.4, .901, .001).astype(np.float32) 
+    l = np.arange(.4, .9025, .0025).astype(np.float32) 
 
     # outpath = '/nobackup/jakravit/data/EAP_batch_outputs/optics_test_s01.p'
     phytodata.info()
