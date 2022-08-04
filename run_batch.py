@@ -46,7 +46,7 @@ if __name__ == "__main__":
     for key in phyto_dict.keys():
         print('On node {} are processed: {}'.format(key, phyto_dict[key]))
     key = int(sys.argv[1])
-    #print('the key is: {}'.format(key))
+    print('the key is: {}'.format(key))
 
     parameters = ['Qc',
                   'Sigma_c',
