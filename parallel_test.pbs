@@ -1,8 +1,8 @@
 #PBS -l select=1:ncpus=28:model=bro
 #PBS -l site=static_broadwell
-#PBS -l walltime=48:00:00
-#PBS -q long
-#PBS -N parallel_long 
+#PBS -l walltime=6:00:00
+#PBS -q normal
+#PBS -N parallel_batch 
 
 
 #set directory
