@@ -142,11 +142,10 @@ if __name__ == "__main__":
         for rname in data[phyto].keys():
             result = {}
             for param in parameters:
-                if param not in ['psdvol', 'VSF']:
-                    result[param] = dask.delayed(pandafy)(data[phyto][rname][param], Deff)
+                if param in ['psdvol', 'VSF']:
+                    result[param] = data[phyto][rname][param]                   
                 else: 
-                    result[param] = data[phyto][rname][param]
-                    result[param] = data[phyto][rname][param]
+                    result[param] = dask.delayed(pandafy)(data[phyto][rname][param], Deff)  
                   
             result = dask.compute(result)[0]
 
