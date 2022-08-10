@@ -59,7 +59,9 @@ if __name__ == "__main__":
                   'astar',
                   'Qbb',
                   'Sigma_bb',
-                  'bbstar',]
+                  'bbstar',
+                  'VSF',
+                  'psdvol]
 
 
     # wavelength range and resolution 
@@ -124,23 +126,28 @@ if __name__ == "__main__":
             print(rname)
 
             # RUN EAP
-            result = dask.delayed(EAP)(l, 
-                         im, 
-                         Deff, 
-                         data[phyto][rname]['ncore'], 
-                         data[phyto][rname]['nshell'], 
-                         data[phyto][rname]['Vs'], 
-                         data[phyto][rname]['Veff'], 
-                         data[phyto][rname]['ci']*1e6, 
-                         data[phyto][rname]['psd'])
-            data[phyto][rname] = result
+            result0 = dask.delayed(EAP)(l, 
+                                       im, 
+                                       Deff, 
+                                       data[phyto][rname]['ncore'], 
+                                       data[phyto][rname]['nshell'], 
+                                       data[phyto][rname]['Vs'], 
+                                       data[phyto][rname]['Veff'], 
+                                       data[phyto][rname]['ci']*1e6, 
+                                       data[phyto][rname]['psd'])
+            data[phyto][rname] = result0
         data[phyto] = dask.compute(data[phyto])[0]
 
         # pandafy params so Deff is index
         for rname in data[phyto].keys():
             result = {}
             for param in parameters:
-                result[param] = dask.delayed(pandafy)(data[phyto][rname][param], Deff)
+                if param not in ['psdvol', 'VSF']:
+                    result[param] = dask.delayed(pandafy)(data[phyto][rname][param], Deff)
+                else: 
+                    result[param] = data[phyto][rname][param]
+                    result[param] = data[phyto][rname][param]
+                  
             result = dask.compute(result)[0]
 
             # add run info to dataframe
