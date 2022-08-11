@@ -61,7 +61,7 @@ if __name__ == "__main__":
                   'Sigma_bb',
                   'bbstar',
                   'VSF',
-                  'psdvol]
+                  'psdvol']
 
 
     # wavelength range and resolution 
