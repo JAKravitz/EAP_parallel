@@ -2,7 +2,7 @@
 #PBS -l site=static_broadwell
 #PBS -l walltime=6:00:00
 #PBS -q normal
-#PBS -N parallel_batch 
+#PBS -N EAP_batch 
 
 
 #set directory
