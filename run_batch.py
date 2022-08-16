@@ -60,7 +60,6 @@ if __name__ == "__main__":
                   'Qbb',
                   'Sigma_bb',
                   'bbstar',
-                  'VSF',
                   'psdvol']
 
 
@@ -139,10 +138,10 @@ if __name__ == "__main__":
         data[phyto] = dask.compute(data[phyto])[0]
 
         # pandafy params so Deff is index
-        for rname in data[phyto].keys():
+        for i, rname in enumerate(data[phyto].keys()):
             result = {}
             for param in parameters:
-                if param in ['psdvol', 'VSF']:
+                if param in ['psdvol']:
                     result[param] = data[phyto][rname][param]                   
                 else: 
                     result[param] = dask.delayed(pandafy)(data[phyto][rname][param], Deff)  
