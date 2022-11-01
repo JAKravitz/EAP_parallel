@@ -1,6 +1,6 @@
 # EAP related
-parallel_test.e*
-parallel_test.o*
+#parallel_test.e*
+#parallel_test.o*
 
 # mac related
 .DS_Store
@@ -11,7 +11,7 @@ __pycache__/
 *$py.class
 
 # C extensions
-*.so
+#*.so
 
 # Distribution / packaging
 .Python
