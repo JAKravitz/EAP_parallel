@@ -8,4 +8,4 @@
 #set directory
 cd /nobackup/jakravit/git/EAP_parallel
 seq 24 | parallel -j 24 -u --sshloginfile $PBS_NODEFILE \
- "cd $PWD;./test_parallel_02.sh {}"
+ "cd $PWD;./run_eap.sh {}"
