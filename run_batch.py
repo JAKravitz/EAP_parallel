@@ -23,7 +23,7 @@ if __name__ == "__main__":
     cluster = LocalCluster()
     client = Client(cluster)
     
-    phytodata = pd.read_csv('/nobackup/jakravit/git/EAP_parallel/phyto_data.csv')
+    phytodata = pd.read_csv('/nobackup/jakravit/git/EAP_parallel/phyto_data_v1027.csv')
     # phytodata = pd.read_csv('/Users/jakravit/pyProjects/EAP_parallel/phyto_data.csv')
     # phytodata = phytodata.iloc[0:28,:]
     # with open('/nobackup/tjnorman/geortm/EAP_02/phyto_dict.pkl', 'rb') as picklefile:
@@ -65,7 +65,7 @@ if __name__ == "__main__":
 
     # wavelength range and resolution 
     #(changing this changes your interp value when normalising kshell)
-    l = np.arange(.4, .9025, .0025).astype(np.float32) 
+    l = np.arange(.4, .901, .001).astype(np.float32) 
 
     # outpath = '/nobackup/jakravit/data/EAP_batch_outputs/optics_test_s01.p'
     phytodata.info()
@@ -93,7 +93,7 @@ if __name__ == "__main__":
                                        k.nshellmax, 3),2)
         VsX = [.1, .35, .6]
         VeffX = [.6]
-        ciX = [2, 3, 5, 7, 9, 12]
+        ciX = [3, 5, 7, 9]
         if k.Size_class == 'pico':
             psdX = [np.arange(.2, 10.2, .2)]
         else:
@@ -156,9 +156,9 @@ if __name__ == "__main__":
             result['Veff'] = iterlist[i]['Veff']
             result['ci'] = iterlist[i]['ci']
             result['psd'] = iterlist[i]['psd']
-            result['class'] = meta.Class
             result['PFT1'] = meta.PFT1
             result['PFT2'] = meta.PFT2
+            result['PFT3'] = meta.PFT3
             result['size_class'] = meta.Size_class
             result['lambda'] = l
 
