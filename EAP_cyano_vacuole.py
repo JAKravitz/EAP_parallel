@@ -7,7 +7,7 @@ Created on Wed Jan 26 17:06:55 2022
 """
 #%%
 # from numpy import f2py
-# sourcefile = open('/Users/jakravit/git/EAP/Dmmex_R14B_4.f','rb')
+# sourcefile = open('/nobackup/jakravit/git/EAP_parallel/Dmmex_R14B_4.f','rb')
 # sourcecode = sourcefile.read()
 # f2py.compile(sourcecode, modulename='Dmmex_R14B_4')
 import Dmmex_R14B_4
